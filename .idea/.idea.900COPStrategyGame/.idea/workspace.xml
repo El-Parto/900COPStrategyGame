@@ -10,6 +10,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile.cs" />
+      <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileData.cs" />
+      <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileProperties.cs" />
+      <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileGenerator.cs" />
+    </changedPaths>
+  </component>
   <component name="ProjectId" id="1xq4aXu8aVdT6HSuJv5AJKbgKTd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -54,12 +65,14 @@
       <option name="presentableId" value="Default" />
       <updated>1631069371269</updated>
       <workItem from="1631069412245" duration="541000" />
+      <workItem from="1631661772452" duration="4764000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
