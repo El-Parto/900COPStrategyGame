@@ -1,42 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
 public class TileData
 {
 
-    private int tileValue; // see TileData param info 
-    private string tileName; // see TileData param info 
-    private string tileType; // see TileData param info 
+    //private static string[] tileTypes= {"Building","Entertainment","Exercise", "Feeding","Sleeping"};
+    [SerializeField]private int tileValue; // see TileData param info 
+    [SerializeField]private string tileName; // see TileData param info 
+    [SerializeField]private string tileType; // see TileData param info 
 
     // You should be able to get tileValue by declaring the value of each separate tile
     public int TileValue
     {
-        get
-        {
-            return tileValue;
-        }
+        get { return tileValue; }
 
+        set { tileValue = value; }
     }
+
     // same as TileValue, but for strings.
-    private string TileName
+    public string TileName
     {
-        get
-        {
-            return tileName;
-        }
-
+        get { return tileName; }
+        set { tileName = value; }
     }
 
-    private string TileType
+    public string TileType
     {
-        get
-        {
-            return tileType;
-        }
-
-        
+        get { return tileType;}
+        set { tileType = value; }
     }
+
     
     
 /// <summary>
@@ -52,13 +46,14 @@ public class TileData
 /// <param name="_tileName">The name of the tile</param>
 /// <param name="_tileType">What type of tile it is</param>
 /// <param name="_tileValue">what the tile is worth</param>
-    public TileData(string _tileName,string _tileType , int _tileValue )
+public TileData(string _tileName,string _tileType , int _tileValue )
     {
-        this.tileName = _tileName;
-        this.tileValue = _tileValue;
-        this.tileType = _tileType;
+        this.TileName = _tileName;
+        this.TileValue = _tileValue;
+        this.TileType = _tileType;
 
     }
+
     
 
 }
