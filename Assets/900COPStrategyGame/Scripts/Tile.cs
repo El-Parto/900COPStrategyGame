@@ -53,7 +53,7 @@ public class Tile : MonoBehaviour
     {
         
       //RaycastHit objInfo = Physics.Raycast()
-      tileGen.
+     // tileGen.
 
     }
    

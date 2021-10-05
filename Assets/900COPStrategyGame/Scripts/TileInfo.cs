@@ -8,7 +8,7 @@ public class TileInfo : ScriptableObject
     public string tileName;
     public string tileDescription;
     public string tileType;
-    public Texture tileTexture;
+    public Material tileMaterial;
     
 
 

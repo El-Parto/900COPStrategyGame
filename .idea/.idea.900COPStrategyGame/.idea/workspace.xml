@@ -32,8 +32,8 @@
       <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/ThisTileIs.cs" />
       <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileGenerator.cs" />
-      <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile.cs" />
       <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile.cs" />
       <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileManager.cs" />
     </changedPaths>
   </component>
@@ -82,7 +82,7 @@
       <updated>1631069371269</updated>
       <workItem from="1631069412245" duration="541000" />
       <workItem from="1631661772452" duration="13338000" />
-      <workItem from="1632183309242" duration="24995000" />
+      <workItem from="1632183309242" duration="27064000" />
     </task>
     <servers />
   </component>
