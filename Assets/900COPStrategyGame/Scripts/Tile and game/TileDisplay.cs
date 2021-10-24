@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 
 [System.Serializable]
-public class Tile : MonoBehaviour
+public class TileDisplay : MonoBehaviour
 {
     private TileGenerator tileGen;
     private TileBehaviour tileBehaviour;

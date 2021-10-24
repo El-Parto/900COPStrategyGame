@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
-public class TileData
+public class TileData : MonoBehaviour
 {
 
     //private static string[] tileTypes= {"Building","Entertainment","Exercise", "Feeding","Sleeping"};
@@ -54,6 +54,7 @@ public TileData(string _tileName,string _tileType , int _tileValue )
 
     }
 
+    //public
     
 
 }
