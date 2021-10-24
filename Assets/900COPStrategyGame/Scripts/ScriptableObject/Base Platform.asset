@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5c9f5ee515cf3942944148371217a31, type: 3}
-  m_Name: New Tile
+  m_Name: Base Platform
   m_EditorClassIdentifier: 
-  tileValue: 0
-  tileName: 
-  tileDescription: 
-  tileType: 
-  tileMaterial: {fileID: 0}
+  tileValue: 1
+  tileName: Basic Platform
+  tileDescription: Platform used to build and construct more tiles for Pumpkin
+  tileType: Building
+  tileMaterial: {fileID: 2100000, guid: d90ad946b5ea8864a8820bc1c857b15f, type: 2}

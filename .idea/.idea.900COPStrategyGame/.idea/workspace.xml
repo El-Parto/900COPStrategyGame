@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd18bc5d-a75a-45a8-a2de-07d25f05ba9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/Tiles/TileBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/Tiles/TileBase.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GameBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GameBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GhostShenanigans.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GhostShenanigans.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileBehaviour.cs" afterDir="false" />
-    </list>
+    <list default="true" id="fd18bc5d-a75a-45a8-a2de-07d25f05ba9c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,12 +19,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/anger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/GUIScripts/UIBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GameBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GhostShenanigans.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/SceneManagement/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GhostShenanigans.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GameBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/anger.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -43,6 +38,7 @@
       <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile.cs" />
       <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1xq4aXu8aVdT6HSuJv5AJKbgKTd" />
@@ -111,6 +107,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
