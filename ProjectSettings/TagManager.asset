@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Cat
   - TileFloorBase
+  - IdiotBox
+  - Ghost
+  - TowerBase
   layers:
   - Default
   - TransparentFX

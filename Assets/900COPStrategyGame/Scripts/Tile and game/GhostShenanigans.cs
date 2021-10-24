@@ -8,23 +8,30 @@ public class GhostShenanigans : MonoBehaviour
     private MeshRenderer tempHit;
     private MeshRenderer rend;
     [SerializeField] private Material[] materials;
-    private bool supported;
-    public LayerMask layerMask = 6;
+    public static bool supported;
+    public LayerMask layerMask = 7;
+    public LayerMask groundMask = 3;
 
     private void Start()
     {
         rend = GetComponent<MeshRenderer>();
-        
     }
 
     private void OnCollisionEnter(Collision other)
     {
         RaycastHit hit;
-        Physics.Raycast(transform.position, Vector3.down, out hit, 1, layerMask);
+        Physics.Raycast(transform.position, Vector3.down, out hit, 1);
 
-        supported = hit.collider.gameObject.layer != 6;
+        if (hit.collider.gameObject.layer == layerMask || hit.collider.gameObject.layer == groundMask)
+        {
+            supported = true;
+        }
+        else
+        {
+            supported = false;
+        }
 
-        if (gameObject.CompareTag("TileFloorBase"))
+        if (gameObject.CompareTag("TowerBase") || supported)
         {
             if(other.gameObject.CompareTag("Untagged"))
                 rend.material = materials[0];

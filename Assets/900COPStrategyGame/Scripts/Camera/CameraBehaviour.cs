@@ -19,12 +19,7 @@ public class CameraBehaviour : MonoBehaviour
     public Text highlightedTile;
     public static RaycastHit hit;
     public static Vector3 hitLocation;
-        
-    void Start()
-    {
-        
-    }
-    
+
     void Update()
     {
         Ray ray = camera.ScreenPointToRay(Input.mousePosition);
@@ -42,16 +37,9 @@ public class CameraBehaviour : MonoBehaviour
             else
             {
                 //describe the building based on what building is present and points that building gives
+                /*TileInfo tempInfo = hit.collider.gameObject.GetComponent<TileInfo>();
+                description.text = tempInfo.tileDescription;*/
             }
-
-
-            /*
-            TileData tempTile = hit.collider.GetComponent<TileData>();
-            if (tempTile != null)
-            {
-                highlightedTile.text = tempTile.TileName;
-            }*/
-
         }
         else
         {

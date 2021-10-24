@@ -11,6 +11,7 @@ public class GameBehaviour : MonoBehaviour
     [SerializeField] private GameObject[] bases, groundBoxes, level1boxes, level2boxes , level3boxes;
     [SerializeField] private bool placing;
     [SerializeField] private GameObject Ghost, PlacedTile;
+    [SerializeField] private int newLayer = 7;
    void Start()
     {
         Hitboxes = new[] {bases, groundBoxes, level1boxes, level2boxes, level3boxes};
@@ -20,20 +21,31 @@ public class GameBehaviour : MonoBehaviour
 
    private void Update()
    {
+       
        if (Input.GetKeyDown(KeyCode.Escape))
        {
            placing = false;
            Ghost.SetActive(false);
        }
 
-       if (!placing) return;
+       if (!placing)
+       {
+           Ghost.transform.position = new Vector3(0, 30, 0);
+           return;
+       }
+       
        Ghost.transform.position = CameraBehaviour.hitLocation;
 
-       if (Input.GetKeyDown(KeyCode.Mouse0))
-       {
-           Instantiate(PlacedTile, Ghost.transform.position, Quaternion.identity);
-           placing = false;
-       }
+
+       if (!Input.GetKeyDown(KeyCode.Mouse0) || CameraBehaviour.hit.collider.gameObject.layer == newLayer) return;
+       
+       var camTarget = CameraBehaviour.hit.collider.gameObject;
+       Instantiate(PlacedTile, Ghost.transform.position, Quaternion.identity);
+       placing = false;
+           
+           
+       camTarget.tag = "PlacedTile";
+       camTarget.layer = newLayer;
    }
 
    public void ToggleHitBoxes(bool up)

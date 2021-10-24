@@ -13,6 +13,7 @@ public class UIBehaviour : MonoBehaviour
     [SerializeField] private int[] tileID;
     [SerializeField] private Sprite[] UIimages;
     [SerializeField] private Text[] buttonText;
+    [SerializeField] private Button[] selectionButtons;
     [SerializeField] private string[] buttonTextString;
     private bool on = true, opOn = true;
     private int selectedInt;
@@ -83,6 +84,7 @@ public class UIBehaviour : MonoBehaviour
     public void PlaceTile()
     {
         GreyOut(tiles[selectedInt]);
+        selectionButtons[selectedInt].enabled = false;
     }
     
     private void Refresh()
@@ -90,6 +92,11 @@ public class UIBehaviour : MonoBehaviour
         foreach (Image tile in tiles)
         {
             tile.color = Color.white;   
+        }
+
+        for (int i = 0; i < selectionButtons.Length; i++)
+        {
+            selectionButtons[i].enabled = true;
         }
     }
 
@@ -105,8 +112,7 @@ public class UIBehaviour : MonoBehaviour
     
     private void GreyOut(Image _image)
     {
-        var imageColour = _image.GetComponent<Color>();
-        imageColour = Color.gray;
+        _image.color = Color.gray;
     }
     
     
