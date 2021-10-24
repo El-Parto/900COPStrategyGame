@@ -20,7 +20,6 @@ public class TileManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-	    
 	    material = tileInfo.tileMaterial;
 	    tileNameText.text = tileInfo.tileName;
 	    tileTypeText.text = tileInfo.tileType;

@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd18bc5d-a75a-45a8-a2de-07d25f05ba9c" name="Default Changelist" comment="" />
+    <list default="true" id="fd18bc5d-a75a-45a8-a2de-07d25f05ba9c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Models/Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Models/Hex_tile_geo.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Models/Hex_tile_geo.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Models/pumpkin_cat.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Models/pumpkin_cat.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Camera/CameraBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Camera/CameraBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/Tile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,10 +32,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/GUIScripts/UIBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -83,15 +93,47 @@
       <workItem from="1631069412245" duration="541000" />
       <workItem from="1631661772452" duration="13338000" />
       <workItem from="1632183309242" duration="27064000" />
+      <workItem from="1634987659137" duration="18835000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/GUIScripts/UIBehaviour.cs</url>
+          <line>77</line>
+          <properties documentPath="C:\Users\Rhys\Documents\GitHub\900COPStrategyGame\Assets\900COPStrategyGame\Scripts\GUIScripts\UIBehaviour.cs" initialLine="77" containingFunctionPresentation="method 'Refresh'">
+            <startOffsets>
+              <option value="2020" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2021" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

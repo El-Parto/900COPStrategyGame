@@ -36,8 +36,6 @@ public class Tile : MonoBehaviour
    private void Update()
     {
         
-        
-        tileBehaviour.localScore = whatIsThisTile.TileValue;
     }
 
 
