@@ -10,59 +10,52 @@ using UnityEngine;
 public class TileGenerator : MonoBehaviour
 {
 
-
-   // private string[] tileNames;
-    private static string[] tileTypes= {"Building","Entertainment","Exercise", "Feeding","Sleeping"};
-    //public TileData[] tileDatas = new TileData[5];
-    
-    // building tiles
-    public TileData basicPlatform = new TileData("Basic Platform", tileTypes[0], 1);
-    public TileData support = new TileData("Support", tileTypes[0], 1);
-	    
-    // excersise tiles
-    public TileData catWheel = new TileData("Cat Wheel", tileTypes[2], 1);
-    public TileData ramp = new TileData("Ramp", tileTypes[2], 1);
-    public TileData ropeBridge = new TileData("Rope Bridge", tileTypes[2], 1);
-	    
-    // entertainment tiles
-    public TileData iScreen = new TileData("iScreen", tileTypes[1], 1);
-    public TileData iTassel = new TileData("Tassel Toy", tileTypes[1], 1);
-    public TileData scratchPost = new TileData("Scratching Post", tileTypes[1], 1);
-	    
-	    
-    //sleeping tiles
-    public TileData enclosedBed = new TileData("Enclosed Bed", tileTypes[4], 1); 
-    public TileData cushyPlatform = new TileData("Cushioned Platform", tileTypes[4], 1);
-	    
-    // feeding tile
-    public TileData autoFeed = new TileData("Automatic Feeder Platform", tileTypes[3], 1);
-
-    public List<TileData> tiles = new List<TileData>();
-    // want to be able to determine what type of object this is upon loading it in
+	[SerializeField] private TileInfo tileInfo;
+	[SerializeField] private TileManager tileManager;
+	[SerializeField] private GameObject building;
 
 
-    public List<TileData> Tiles
-    {
-	    get => tiles;
-	    set => tiles = value;
-    }
-    
+	// the following is Gameobject arrays separated by type.
+	// they are filled in manually in the scene.
+	// they should already be filled in in the scene, but check just to make sure.
+	public GameObject[] buildingPrefabs; // if inspector empty, grab objects from > prefabs / tiles / Building
+	public GameObject[] exercisePrefabs; // if inspector empty, grab objects from > prefabs / tiles / excersise
+	public GameObject[] entertainmentPrefabs; // if inspector empty, grab objects from > prefabs / tiles / entertainment
+	public GameObject[] feedingPrefabs; // if inspector empty, grab objects from > prefabs / tiles / Feeding
+	public GameObject[] sleepingPrefabs; // if inspector empty, grab objects from > prefabs / tiles / Sleeping
 
-    // Start is called before the first frame update
-    void Start()
-    {
-	    InitialiseTile();
-    }
-    
 
-    //function for generating the appropriate tiles. public for now
-    
-    public void InitialiseTile()
-    {
+	// The plan: generate a random tile based off of type. 
+	void Start() { }
 
-	    
-    }
-    
-    
-    
+
+
+	// Start is called before the first frame update
+
+
+
+	public void InstantiateBuildingTile()
+	{
+		int objectInstatiatedID = UnityEngine.Random.Range(0, buildingPrefabs.Length);
+		GameObject objectInstantiated = Instantiate(buildingPrefabs[objectInstatiatedID],)
+	}
+	public void InstantiateExerciseTile()
+	{
+		
+	}
+	public void InstantiateEntertainmentTile()
+	{
+		
+	}
+	public void InstantiateFeedingTile()
+	{
+		
+	}
+	public void InstantiateSleepingTile()
+	{
+		
+	}
+
+
+
 }
