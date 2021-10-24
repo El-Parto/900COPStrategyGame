@@ -10,8 +10,7 @@ using UnityEngine;
 public class TileGenerator : MonoBehaviour
 {
 
-	[SerializeField] private TileInfo tileInfo;
-	[SerializeField] private TileManager tileManager;
+	
 	
 	[SerializeField] private Transform spawnPoint; // the position in which it spawns
 
@@ -27,7 +26,6 @@ public class TileGenerator : MonoBehaviour
 
 
 	// The plan: generate a random tile based off of type. 
-	void Start() { }
 
 
 
@@ -71,7 +69,7 @@ public class TileGenerator : MonoBehaviour
 	public void InstantiateFeedingTile()
 	{
 		int objectInstatiatedID = UnityEngine.Random.Range(0, feedingPrefabs.Length); // arbitrary value used to determin which game object spawns
-		GameObject objectInstantiated = Instantiate(feedingPrefabs[objectInstatiatedID], spawnPoint);
+		GameObject objectInstantiated = Instantiate(feedingPrefabs[objectInstatiatedID], spawnPoint); // even though there's only one value, it should still work.
 	}
 	
 	/// <summary>

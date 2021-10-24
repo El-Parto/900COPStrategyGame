@@ -969,6 +969,69 @@ MonoBehaviour:
   tooltip: {fileID: 1872068695}
   description: {fileID: 0}
   highlightedTile: {fileID: 0}
+--- !u!1 &307347085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 307347087}
+  - component: {fileID: 307347086}
+  m_Layer: 0
+  m_Name: Tile Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &307347086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307347085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3bd22f60b389fe46b6593cc0835d7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileInfo: {fileID: 0}
+  tileManager: {fileID: 0}
+  spawnPoint: {fileID: 1629205007}
+  buildingPrefabs:
+  - {fileID: 3290121607506878935, guid: 1533824ffcf89be4fae302fd3cceb3aa, type: 3}
+  - {fileID: 3290121607506878935, guid: c8dd16d47397da344b61f606258460c6, type: 3}
+  exercisePrefabs:
+  - {fileID: 3290121607506878935, guid: 76efb16375dd1664689a6444f57f4405, type: 3}
+  - {fileID: 3290121607506878935, guid: c441ea5a520b6e945b37a4430ba4a54f, type: 3}
+  - {fileID: 3290121607506878935, guid: 3f58548583a2b0c4184764b1c76b11de, type: 3}
+  entertainmentPrefabs:
+  - {fileID: 3290121607506878935, guid: d3d0c82450fc5b643aecb58d1e13ba89, type: 3}
+  - {fileID: 3290121607506878935, guid: 62bf4e316f3875945a12ad2942f72bf1, type: 3}
+  - {fileID: 3290121607506878935, guid: 74778f940e20c74488e2d563f5d6ae9c, type: 3}
+  feedingPrefabs:
+  - {fileID: 3290121607506878935, guid: e42fac66b02cf144cbd14052e42d41f2, type: 3}
+  sleepingPrefabs:
+  - {fileID: 3290121607506878935, guid: 08e2cef1fc5788f49bbb89bd7e5e4e2b, type: 3}
+  - {fileID: 3290121607506878935, guid: 33b73713a45fd2540ba58b37016ad1ed, type: 3}
+  - {fileID: 3290121607506878935, guid: 67e1ab189593bac45847e674dc5e860f, type: 3}
+--- !u!4 &307347087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307347085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &404267841
 GameObject:
   m_ObjectHideFlags: 0
@@ -4664,6 +4727,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623075284}
   m_CullTransparentMesh: 1
+--- !u!1 &1629205006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1629205007}
+  m_Layer: 0
+  m_Name: TileSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1629205007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629205006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1639294696
 GameObject:
   m_ObjectHideFlags: 0
