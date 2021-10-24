@@ -12,7 +12,8 @@ public class TileGenerator : MonoBehaviour
 
 	[SerializeField] private TileInfo tileInfo;
 	[SerializeField] private TileManager tileManager;
-	[SerializeField] private GameObject building;
+	
+	[SerializeField] private Transform spawnPoint; // the position in which it spawns
 
 
 	// the following is Gameobject arrays separated by type.
@@ -33,27 +34,54 @@ public class TileGenerator : MonoBehaviour
 	// Start is called before the first frame update
 
 
-
+	/// <summary>
+	/// Instantiates a random tile (gameobject) in the buildingPrefab array.
+	/// spawnPoint is the transform.position of where you'd like to spawn it. 
+	/// </summary>
 	public void InstantiateBuildingTile()
 	{
-		int objectInstatiatedID = UnityEngine.Random.Range(0, buildingPrefabs.Length);
-		GameObject objectInstantiated = Instantiate(buildingPrefabs[objectInstatiatedID],)
+		int objectInstatiatedID = UnityEngine.Random.Range(0, buildingPrefabs.Length); // arbitrary value used to determin which game object spawns
+		GameObject objectInstantiated = Instantiate(buildingPrefabs[objectInstatiatedID], spawnPoint);
 	}
+	
+	/// <summary>
+	/// Instantiates a random tile (gameobject) in the exercisePrefab array.
+	/// spawnPoint is the transform.position of where you'd like to spawn it. 
+	/// </summary>
 	public void InstantiateExerciseTile()
 	{
-		
+		int objectInstatiatedID = UnityEngine.Random.Range(0, exercisePrefabs.Length); // arbitrary value used to determin which game object spawns
+		GameObject objectInstantiated = Instantiate(exercisePrefabs[objectInstatiatedID], spawnPoint);
 	}
+
+	/// <summary>
+	/// Instantiates a random tile (gameobject) in the entertainmentPrefab array.
+	/// spawnPoint is the transform.position of where you'd like to spawn it. 
+	/// </summary>
 	public void InstantiateEntertainmentTile()
 	{
-		
+		int objectInstatiatedID = UnityEngine.Random.Range(0, entertainmentPrefabs.Length); // arbitrary value used to determin which game object spawns
+		GameObject objectInstantiated = Instantiate(entertainmentPrefabs[objectInstatiatedID], spawnPoint);
 	}
+	
+	/// <summary>
+	/// Instantiates a random tile (gameobject) in the feedingPrefab array.
+	/// spawnPoint is the transform.position of where you'd like to spawn it. 
+	/// </summary>
 	public void InstantiateFeedingTile()
 	{
-		
+		int objectInstatiatedID = UnityEngine.Random.Range(0, feedingPrefabs.Length); // arbitrary value used to determin which game object spawns
+		GameObject objectInstantiated = Instantiate(feedingPrefabs[objectInstatiatedID], spawnPoint);
 	}
+	
+	/// <summary>
+	/// Instantiates a random tile (gameobject) in the sleepingPrefab array.
+	/// spawnPoint is the transform.position of where you'd like to spawn it. 
+	/// </summary>
 	public void InstantiateSleepingTile()
 	{
-		
+		int objectInstatiatedID = UnityEngine.Random.Range(0, sleepingPrefabs.Length); // arbitrary value used to determin which game object spawns
+		GameObject objectInstantiated = Instantiate(sleepingPrefabs[objectInstatiatedID], spawnPoint);
 	}
 
 
