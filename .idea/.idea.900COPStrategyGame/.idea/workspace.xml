@@ -3,22 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fd18bc5d-a75a-45a8-a2de-07d25f05ba9c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/Placeholder.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/Placeholder.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/TileBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/TileBase.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Textures/Hex_tile_screen.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Textures/Hex_tile_screen.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Textures/Hex_tile_tassel.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Textures/Hex_tile_tassel.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Textures/Hex_tile_wheel.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Textures/Hex_tile_wheel.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Textures/support texture building.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Textures/support texture building.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Camera/CameraBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Camera/CameraBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/GUIScripts/UIBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/GUIScripts/UIBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/Tiles/TileBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/Tiles/TileBase.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GameBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GameBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GhostShenanigans.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GhostShenanigans.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileBehaviour.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +91,7 @@
       <workItem from="1631069412245" duration="541000" />
       <workItem from="1631661772452" duration="13338000" />
       <workItem from="1632183309242" duration="27064000" />
-      <workItem from="1634987659137" duration="38612000" />
+      <workItem from="1634987659137" duration="39906000" />
     </task>
     <servers />
   </component>

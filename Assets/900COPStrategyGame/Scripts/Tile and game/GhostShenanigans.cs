@@ -22,7 +22,7 @@ public class GhostShenanigans : MonoBehaviour
         RaycastHit hit;
         Physics.Raycast(transform.position, Vector3.down, out hit, 1, layerMask);
 
-        //supported = hit.collider.gameObject.layer != 6;
+        supported = hit.collider.gameObject.layer != 6;
 
         if (gameObject.CompareTag("TileFloorBase"))
         {
@@ -35,7 +35,6 @@ public class GhostShenanigans : MonoBehaviour
             if(other.gameObject.CompareTag("Untagged"))
                 rend.material = materials[2];
         }
-
     }
 
     private void OnCollisionExit(Collision other)

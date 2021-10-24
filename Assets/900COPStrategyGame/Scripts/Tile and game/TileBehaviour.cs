@@ -8,8 +8,8 @@ public class TileBehaviour : MonoBehaviour
 {
 	[SerializeField] private int adjacentDistance = 2;
 	public int tileScore;
-	public TileData tempAccess;
-	public TileData thisTile;
+	public TileInfo tempAccess;
+	public TileInfo thisTile;
 	[SerializeField] private Vector3[] hexAngle;
 	public List<string> adjacentTiles;
 
@@ -20,7 +20,7 @@ public class TileBehaviour : MonoBehaviour
 
 	private void Start()
 	{
-		thisTile = GetComponent<TileData>();
+		thisTile = GetComponent<TileInfo>();
 		hexAngle = new[]
 		{
 			Vector3.forward, norEast, Vector3.right, southEast, Vector3.back, southWest, Vector3.left,
@@ -33,13 +33,13 @@ public class TileBehaviour : MonoBehaviour
 	{
 		adjacentTiles.Clear();
 		
-		for (int i = 0; i < hexAngle.Length; i++)
+		foreach (var angle in hexAngle)
 		{
 			RaycastHit hit;
-			if (Physics.Raycast(transform.position, hexAngle[i], out hit, adjacentDistance))
+			if (Physics.Raycast(transform.position, angle, out hit, adjacentDistance))
 			{
-				tempAccess = hit.collider.GetComponent<TileData>();
-				adjacentTiles.Add(tempAccess.TileType);
+				tempAccess = hit.collider.GetComponent<TileInfo>();
+				//adjacentTiles.Add(tempAccess.TileType);
 			}
 		}
 		AddScore();
@@ -57,7 +57,7 @@ public class NonScoring : TileBehaviour
 	
 	public override void AddScore()
 	{
-		tileScore = thisTile.TileValue;
+		//tileScore = thisTile.TileValue;
 	}
 }
 
@@ -71,7 +71,7 @@ public class NextToSleep : TileBehaviour
 				adjacentTiles.Remove(adjacentTiles[i]);
 		}
 		
-		tileScore = thisTile.TileValue + adjacentTiles.Count;
+		//tileScore = thisTile.TileValue + adjacentTiles.Count;
 	}
 }
 
@@ -85,7 +85,7 @@ public class NextToExercise : TileBehaviour
 				adjacentTiles.Remove(adjacentTiles[i]);
 		}
 		
-		tileScore = thisTile.TileValue + adjacentTiles.Count;
+		//tileScore = thisTile.TileValue + adjacentTiles.Count;
 	}
 }
 

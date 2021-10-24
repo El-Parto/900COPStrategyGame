@@ -31,7 +31,6 @@ public class CameraBehaviour : MonoBehaviour
         if (Physics.Raycast(ray,out hit, Mathf.Infinity, layerMask))
         {
             hitLocation = hit.collider.gameObject.transform.position;
-            var tempRenderer = hit.collider.gameObject.GetComponent<MeshRenderer>();
             tooltip.SetActive(true);
             tooltip.transform.position = Input.mousePosition;
 
