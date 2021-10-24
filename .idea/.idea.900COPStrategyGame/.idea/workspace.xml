@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd18bc5d-a75a-45a8-a2de-07d25f05ba9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/NegativeMesh.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/NegativeMesh.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/PositiveMesh.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/PositiveMesh.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/hurg.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/hurg.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/Tiles/TileBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/Tiles/TileBase.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Camera/CameraBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Camera/CameraBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/GUIScripts/UIBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/GUIScripts/UIBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GameBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GameBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GhostShenanigans.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GhostShenanigans.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="fd18bc5d-a75a-45a8-a2de-07d25f05ba9c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +85,7 @@
       <workItem from="1631069412245" duration="541000" />
       <workItem from="1631661772452" duration="13338000" />
       <workItem from="1632183309242" duration="27064000" />
-      <workItem from="1634987659137" duration="43872000" />
+      <workItem from="1634987659137" duration="44251000" />
     </task>
     <servers />
   </component>
