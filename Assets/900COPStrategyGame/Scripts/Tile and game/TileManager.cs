@@ -12,18 +12,22 @@ public class TileManager : MonoBehaviour
 
     [SerializeField] private GameObject tileObject;
     [SerializeField] private Material material;
-    [SerializeField] private TextMeshProUGUI descriptionText;
-    public TextMeshProUGUI tileNameText;
-    public TextMeshProUGUI tileTypeText;
+  //  [SerializeField] private Text descriptionText;
+  //  public Text tileNameText;
+   // public Text tileTypeText;
     [SerializeField] private int value;
+    public string createdTileName;
+    public string createdTileDescription;
+    public string createdtileType;
     
     // Start is called before the first frame update
     void Start()
     {
 	    material = tileInfo.tileMaterial;
-	    tileNameText.text = tileInfo.tileName;
-	    tileTypeText.text = tileInfo.tileType;
-	    descriptionText.text = tileInfo.tileDescription;
+	    createdTileName = tileInfo.tileName;
+	    createdTileDescription = tileInfo.tileType;
+	    createdtileType = tileInfo.tileDescription;
+	   
 	    value = tileInfo.tileValue;
     }
 
