@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraBehaviour : MonoBehaviour
 {
@@ -11,7 +13,13 @@ public class CameraBehaviour : MonoBehaviour
     [SerializeField] private float sensitivity = 10;
     [SerializeField] private Transform managerTransform;
     [SerializeField] private int altitude;
-    
+    private int layerMask = 5 << 6;
+    [SerializeField] private GameObject tooltip;
+    [SerializeField] private Text description;
+    public Text highlightedTile;
+    public static RaycastHit hit;
+    public static Vector3 hitLocation;
+        
     void Start()
     {
         
@@ -19,14 +27,42 @@ public class CameraBehaviour : MonoBehaviour
     
     void Update()
     {
+        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray,out hit, Mathf.Infinity, layerMask))
+        {
+            hitLocation = hit.collider.gameObject.transform.position;
+            var tempRenderer = hit.collider.gameObject.GetComponent<MeshRenderer>();
+            tooltip.SetActive(true);
+            tooltip.transform.position = Input.mousePosition;
 
+            if (hit.collider.CompareTag("TileFloorBase"))
+            {
+                highlightedTile.text = "Empty location:";
+                description.text = "You could build anything to appease his lordship here";
+            }
+            else
+            {
+                //describe the building based on what building is present and points that building gives
+            }
+
+
+            /*
+            TileData tempTile = hit.collider.GetComponent<TileData>();
+            if (tempTile != null)
+            {
+                highlightedTile.text = tempTile.TileName;
+            }*/
+
+        }
+        else
+        {
+            tooltip.SetActive(false);
+        }
     }
 
     private void FixedUpdate()
     {
-
         MoveCamera();
-        
     }
 
     void MoveCamera()

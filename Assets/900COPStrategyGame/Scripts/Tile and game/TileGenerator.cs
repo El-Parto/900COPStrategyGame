@@ -14,11 +14,7 @@ public class TileGenerator : MonoBehaviour
    // private string[] tileNames;
     private static string[] tileTypes= {"Building","Entertainment","Exercise", "Feeding","Sleeping"};
     //public TileData[] tileDatas = new TileData[5];
-
     
-    
-    
-
     // building tiles
     public TileData basicPlatform = new TileData("Basic Platform", tileTypes[0], 1);
     public TileData support = new TileData("Support", tileTypes[0], 1);
@@ -57,13 +53,8 @@ public class TileGenerator : MonoBehaviour
     {
 	    InitialiseTile();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
+
     //function for generating the appropriate tiles. public for now
     
     public void InitialiseTile()

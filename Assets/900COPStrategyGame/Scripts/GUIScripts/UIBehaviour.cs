@@ -10,14 +10,22 @@ public class UIBehaviour : MonoBehaviour
     [SerializeField] private GameObject PanelStart, PanelEnd;
     [SerializeField] private GameObject opPanelStart, opPanelEnd;
     [SerializeField] private Image[] tiles;
+    [SerializeField] private int[] tileID;
+    [SerializeField] private Sprite[] UIimages;
+    [SerializeField] private Text[] buttonText;
+    [SerializeField] private string[] buttonTextString;
     private bool on = true, opOn = true;
     private int selectedInt;
     private bool placing;
-    
+
+    private void Start()
+    {
+        RNGesus();
+    }
+
     public void Minimise()
     {
         on = !on;
-        placing = false;
     }
 
     public void OptionsMenuMinimise()
@@ -28,7 +36,6 @@ public class UIBehaviour : MonoBehaviour
 
     private void Update()
     {
-
         #region Slides
 
         if (on)
@@ -57,9 +64,12 @@ public class UIBehaviour : MonoBehaviour
 
 
         #endregion
-        
-        
 
+        if (placing && Input.GetKeyDown(KeyCode.Escape))
+        {
+            placing = false;
+            Refresh();
+        }
     }
 
     public void PickTile(int _selected)
@@ -67,6 +77,7 @@ public class UIBehaviour : MonoBehaviour
         on = false;
         selectedInt = _selected;
         placing = true;
+        GreyOut(tiles[_selected]);
     }
 
     public void PlaceTile()
@@ -81,11 +92,28 @@ public class UIBehaviour : MonoBehaviour
             tile.color = Color.white;   
         }
     }
+
+    void RNGesus()
+    {
+        for (int i = 0; i < tiles.Length; i++)
+        {
+            tileID[i] = UnityEngine.Random.Range(0, 9);
+            tiles[i].sprite = UIimages[tileID[i]];
+            buttonText[i].text = buttonTextString[tileID[i]];
+        }
+    }
     
     private void GreyOut(Image _image)
     {
         var imageColour = _image.GetComponent<Color>();
         imageColour = Color.gray;
+    }
+    
+    
+
+    public void Deselect()
+    {
+        placing = false;
     }
 
     public void Quit()
