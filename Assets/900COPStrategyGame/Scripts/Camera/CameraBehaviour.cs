@@ -48,13 +48,13 @@ public class CameraBehaviour : MonoBehaviour
         if (up && altitude < 3)
         {
             altitude++;
-            managerTransform.position += new Vector3(0, 5, 0);
+            managerTransform.position += new Vector3(0, 1, 0);
         }
         
         if (!up && altitude > 0)
         {
             altitude--;
-            managerTransform.position += new Vector3(0, -5, 0);
+            managerTransform.position += new Vector3(0, -1, 0);
         }
     }
     

@@ -3,17 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="fd18bc5d-a75a-45a8-a2de-07d25f05ba9c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Models/Assets.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Models/Hex_tile_geo.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Models/Hex_tile_geo.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Models/pumpkin_cat.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Models/pumpkin_cat.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/TileBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/TileBase.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/SampleScene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Camera/CameraBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Camera/CameraBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/Tile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/SceneManagement/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/SceneManagement/SceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/Tile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/Tile.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileGenerator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileGenerator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile/TileManager.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +42,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/GUIScripts/UIBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GameBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/SceneManagement/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -93,7 +105,7 @@
       <workItem from="1631069412245" duration="541000" />
       <workItem from="1631661772452" duration="13338000" />
       <workItem from="1632183309242" duration="27064000" />
-      <workItem from="1634987659137" duration="18835000" />
+      <workItem from="1634987659137" duration="23103000" />
     </task>
     <servers />
   </component>
