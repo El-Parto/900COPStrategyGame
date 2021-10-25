@@ -95,6 +95,7 @@ public class UIBehaviour : MonoBehaviour
         on = false;
         placing = true;
         GreyOut(tiles[_selected]);
+        GameBehaviour.selectedTile = tileID[_selected];
         selectionButtons[_selected].enabled = false;
     }
 

@@ -13,10 +13,11 @@ public class GameBehaviour : MonoBehaviour
     [SerializeField] private bool placing;
     [SerializeField] private GameObject Ghost, PlacedTile;
     [SerializeField] private int[] gameTimer;
-    [SerializeField] private LayerMask buildableZone = 7;
+    [SerializeField] private int builtZone = 7;
     [SerializeField] private GameObject[] availableTiles;
-    [SerializeField] private int selectedTile;
-    void Start()
+    public static int selectedTile;
+
+    private void Start()
     {
         gameTimer = new int[2];
         Hitboxes = new[] {bases, groundBoxes, level1boxes, level2boxes, level3boxes};
@@ -39,12 +40,21 @@ public class GameBehaviour : MonoBehaviour
            return;
        }
 
-       if (placing && Input.GetKeyDown(KeyCode.Mouse0))
-       {
-           Instantiate(availableTiles[selectedTile], Ghost.transform.position, Quaternion.identity);
-       }
-       
        Ghost.transform.position = CameraBehaviour.hitLocation;
+
+       if (!placing || !Input.GetKeyDown(KeyCode.Mouse0)) return;
+
+       #region placing a tile
+       
+       PlacedTile = Instantiate(availableTiles[selectedTile], CameraBehaviour.hit.collider.gameObject.transform);
+       var target = CameraBehaviour.hit.collider.gameObject;
+       target.tag = availableTiles[selectedTile].tag;
+       target.layer = builtZone;
+           
+       placing = false;
+       #endregion
+
+
    }
 
    void MarchOfTime()

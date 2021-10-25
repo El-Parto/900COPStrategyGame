@@ -16,8 +16,7 @@ public class CameraBehaviour : MonoBehaviour
     [SerializeField] private int altitude;
     private int layerMask = 5 << 6;
     [SerializeField] private GameObject tooltip;
-    [SerializeField] private Text description;
-    public Text highlightedTile;
+    [SerializeField] private Text highlightedTile, tileType, description;
     public static RaycastHit hit;
     public static Vector3 hitLocation;
     private Ray ray;
@@ -44,13 +43,16 @@ public class CameraBehaviour : MonoBehaviour
             if (hit.collider.CompareTag("TileFloorBase"))
             {
                 highlightedTile.text = "Empty location:";
+                tileType.text = "none";
                 description.text = "You could build anything to appease his lordship here";
             }
             
-            if(hit.collider.CompareTag("PlacedTile"))
+            else if(hit.collider.GetComponentInChildren<TileManager>())
             {
-                TileInfo tempInfo = hit.collider.gameObject.GetComponent<TileInfo>();
-                description.text = tempInfo.tileDescription;
+                TileManager tempInfo = hit.collider.GetComponentInChildren<TileManager>();
+                highlightedTile.text = tempInfo.createdTileName;
+                description.text = "Type: " + tempInfo.createdTileDescription;
+                tileType.text =  tempInfo.createdtileType;
             }
         }
         else
