@@ -7,9 +7,6 @@ using UnityEngine;
 public class TileBehaviour : MonoBehaviour
 {
 	[SerializeField] private int adjacentDistance = 2;
-	public int tileScore;
-	public TileInfo tempAccess;
-	public TileInfo thisTile;
 	[SerializeField] private Vector3[] hexAngle;
 	public List<string> adjacentTiles;
 
@@ -20,15 +17,15 @@ public class TileBehaviour : MonoBehaviour
 
 	private void Start()
 	{
-		thisTile = GetComponent<TileInfo>();
 		hexAngle = new[]
 		{
 			Vector3.forward, norEast, Vector3.right, southEast, Vector3.back, southWest, Vector3.left,
 			norWest, Vector3.up, Vector3.down,
 		};
-		ChainReaction();
+		//ChainReaction();
 	}
 
+	/*
 	public void ChainReaction()
 	{
 		adjacentTiles.Clear();
@@ -44,6 +41,7 @@ public class TileBehaviour : MonoBehaviour
 		}
 		AddScore();
 	}
+	*/
 
 	public virtual void AddScore()
 	{
@@ -52,7 +50,7 @@ public class TileBehaviour : MonoBehaviour
 
 }
 
-public class NonScoring : TileBehaviour
+/*public class NonScoring : TileBehaviour
 {
 	
 	public override void AddScore()
@@ -107,4 +105,4 @@ public class CloseToRoof : TileBehaviour
 		Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit,Mathf.Infinity, layerMask);
 		tileScore += (int)hit.distance;
 	}
-}
+}*/

@@ -19,10 +19,8 @@ public class TileManager : MonoBehaviour
     public string createdTileName; // should be auto filled by Script' object
     public string createdTileDescription; // should be auto filled by Script' object
     public string createdtileType; // should be auto filled by Script' object
-
     public int bonusModifier; // modifier if you want to include bonus scores. feel free to change to float if need be.
-    
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,19 +36,10 @@ public class TileManager : MonoBehaviour
 	    // e.g. base platform Game object has this script on it, that needs a reference to a scriptable object also named
 	    // base platform, so then the values in the sepcific scriptable object is called. And only the object reference.
 
-	    // tile  UI text references here
-
-
+	    // tile UI text references here
 	    tileNameText.text = createdTileName;
 	    descriptionText.text = createdTileDescription;
 	    tileTypeText.text = createdtileType;
-
-
-
     }
-	
-    
-    
-    
-    
+
 }

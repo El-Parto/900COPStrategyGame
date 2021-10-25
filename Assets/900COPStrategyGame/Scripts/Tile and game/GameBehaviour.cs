@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
-using UnityEngine.Windows.WebCam;
 
 public class GameBehaviour : MonoBehaviour
 { 
@@ -45,36 +44,40 @@ public class GameBehaviour : MonoBehaviour
        if (!placing || !Input.GetKeyDown(KeyCode.Mouse0)) return;
 
        #region placing a tile
-       
-       PlacedTile = Instantiate(availableTiles[selectedTile], CameraBehaviour.hit.collider.gameObject.transform);
-       var target = CameraBehaviour.hit.collider.gameObject;
-       target.tag = availableTiles[selectedTile].tag;
-       target.layer = builtZone;
+
+       if (GhostShenanigans.available)
+       {
+           PlacedTile = Instantiate(availableTiles[selectedTile], CameraBehaviour.hit.collider.gameObject.transform.position, 
+               Quaternion.AngleAxis(180, Vector3.up));
+           var target = CameraBehaviour.hit.collider.gameObject;
+           target.tag = availableTiles[selectedTile].tag;
+           target.layer = builtZone;
+           MarchOfTime();
            
-       placing = false;
+           placing = false;
+       }
        #endregion
-
-
    }
 
    void MarchOfTime()
    {
        gameTimer[0]++;
-       
        if (gameTimer[0] > 2)
        {
            gameTimer[0] = 0;
            gameTimer[1]++;
+
            UIBehaviour.endDay = true;
        }
 
+       UIBehaviour.tileNo = gameTimer[0];
+       
        if (gameTimer[1] > 7)
        {
            UIBehaviour.gameOver = true;
        }
    }
    
-
    public void ToggleHitBoxes(bool up)
     {
         if (up && playerHeight < 3)

@@ -22,10 +22,11 @@ public class UIBehaviour : MonoBehaviour
     [SerializeField] private Text[] buttonText;
     [SerializeField] private Button[] selectionButtons;
     [SerializeField] private string[] buttonTextString;
-    [SerializeField] private Text gameTimer;
+    [SerializeField] private Text gameTimer, todayTiles;
     public static bool gameOver;
     private bool on = true, opOn = true;
     private int day = 1;
+    public static int tileNo;
     private bool placing;
     public static bool endDay;
     
@@ -82,11 +83,21 @@ public class UIBehaviour : MonoBehaviour
             placing = false;
             Refresh();
         }
+        
+        TileCounter();
 
-        if (endDay)
+        if (!endDay) return; 
+        Refresh();
+        RNGesus();
+    }
+
+    private void TileCounter()
+    {
+        if (tileNo != 0)
+            todayTiles.text = "Tiles placed:" + tileNo + " / 3";
+        else
         {
-            Refresh();
-            RNGesus();
+            todayTiles.text = "A new day has dawned, Tiles re-rolled!";
         }
     }
 
@@ -103,7 +114,8 @@ public class UIBehaviour : MonoBehaviour
     {
         day++;
         gameTimer.text = "Day: " + day + "/7";
-        
+        Debug.Log(tileNo);
+
         if (gameOver)
         {
             finalScore.text = String.Empty;
@@ -130,7 +142,6 @@ public class UIBehaviour : MonoBehaviour
             tiles[i].sprite = UIimages[tileID[i]];
             buttonText[i].text = buttonTextString[tileID[i]];
         }
-
         endDay = false;
     }
     

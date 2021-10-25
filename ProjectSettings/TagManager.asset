@@ -11,6 +11,16 @@ TagManager:
   - TowerBase
   - PlacedTile
   - buttons
+  - Screen
+  - Tassel
+  - Wheel
+  - Scratching
+  - Hammock
+  - AutoFeeder
+  - Enclosed
+  - Ramp
+  - Bridge
+  - Support
   layers:
   - Default
   - TransparentFX

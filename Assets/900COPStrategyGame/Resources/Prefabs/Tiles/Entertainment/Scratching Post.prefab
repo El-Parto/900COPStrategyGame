@@ -66,7 +66,6 @@ GameObject:
   - component: {fileID: 4255065219162445712}
   - component: {fileID: 910532862779004981}
   - component: {fileID: 3118227729880968447}
-  - component: {fileID: 7695129945501179263}
   m_Layer: 0
   m_Name: Hex_tile_geo
   m_TagString: Untagged
@@ -137,20 +136,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7695129945501179263
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3478705159511231786}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -530131240172089429, guid: 6539f203c2fecd04289cd76e047f4b47, type: 3}
 --- !u!1 &4676869157678609721
 GameObject:
   m_ObjectHideFlags: 0

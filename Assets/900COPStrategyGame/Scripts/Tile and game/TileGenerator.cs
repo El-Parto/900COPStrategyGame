@@ -3,14 +3,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-
 [System.Serializable]
 public class TileGenerator : MonoBehaviour
 {
-
-	
 	
 	[SerializeField] private Transform spawnPoint; // the position in which it spawns
 
@@ -26,8 +21,6 @@ public class TileGenerator : MonoBehaviour
 
 
 	// The plan: generate a random tile based off of type. 
-
-
 
 	// Start is called before the first frame update
 

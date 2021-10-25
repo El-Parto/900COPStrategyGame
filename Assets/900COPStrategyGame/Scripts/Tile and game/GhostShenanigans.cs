@@ -8,8 +8,10 @@ public class GhostShenanigans : MonoBehaviour
     private MeshRenderer tempHit;
     private MeshRenderer rend;
     [SerializeField] private Material[] materials;
-    private bool available;
+    [SerializeField] private int support = 7;
+     public static bool available;
     private float downDistance = 1;
+    
 
     private void Start()
     {
@@ -31,7 +33,7 @@ public class GhostShenanigans : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, downDistance))
         {
-            if((hit.collider.gameObject.CompareTag("TowerBase") || hit.collider.gameObject.CompareTag("PlacedTile"))
+            if((hit.collider.gameObject.CompareTag("TowerBase") || hit.collider.gameObject.layer == support)
                && !gameObject.CompareTag("PlacedTile"))
             {
                 available = true;
