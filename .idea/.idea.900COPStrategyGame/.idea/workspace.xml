@@ -50,6 +50,8 @@
       <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile.cs" />
       <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/TileManager.cs" />
       <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileGenerator.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1xq4aXu8aVdT6HSuJv5AJKbgKTd" />

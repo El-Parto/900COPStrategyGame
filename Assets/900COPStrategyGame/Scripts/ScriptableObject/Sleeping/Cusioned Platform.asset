@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c9f5ee515cf3942944148371217a31, type: 3}
+  m_Name: Cusioned Platform
+  m_EditorClassIdentifier: 
+  tileValue: 4
+  tileName: Cushioned Platform
+  tileDescription: Cat and Mouse was never this easy.
+  tileType: Sleeping
+  tileMaterial: {fileID: 2100000, guid: 58908ee3af4a7fb43a44d2221d1846dc, type: 2}
