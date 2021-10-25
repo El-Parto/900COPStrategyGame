@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
+using Cursor = UnityEngine.UIElements.Cursor;
 
 public class CameraBehaviour : MonoBehaviour
 {
@@ -19,18 +20,24 @@ public class CameraBehaviour : MonoBehaviour
     public Text highlightedTile;
     public static RaycastHit hit;
     public static Vector3 hitLocation;
-        
-    void Start()
+    private Ray ray;
+    private Ray UIray;
+
+    private void Start()
     {
-        
+        ray = camera.ScreenPointToRay(Vector3.forward);
     }
-    
+
+
     void Update()
     {
-        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+        ray = camera.ScreenPointToRay(Input.mousePosition);
+
+        #region inSceneTileToolTip
         if (Physics.Raycast(ray,out hit, Mathf.Infinity, layerMask))
         {
             hitLocation = hit.collider.gameObject.transform.position;
+            
             tooltip.SetActive(true);
             tooltip.transform.position = Input.mousePosition;
 
@@ -39,24 +46,24 @@ public class CameraBehaviour : MonoBehaviour
                 highlightedTile.text = "Empty location:";
                 description.text = "You could build anything to appease his lordship here";
             }
-            else
+            
+            if(hit.collider.CompareTag("PlacedTile"))
             {
-                //describe the building based on what building is present and points that building gives
+                TileInfo tempInfo = hit.collider.gameObject.GetComponent<TileInfo>();
+                description.text = tempInfo.tileDescription;
             }
-
-
-            /*
-            TileData tempTile = hit.collider.GetComponent<TileData>();
-            if (tempTile != null)
-            {
-                highlightedTile.text = tempTile.TileName;
-            }*/
-
         }
         else
         {
             tooltip.SetActive(false);
         }
+        #endregion
+
+        #region CanvasToolTip
+        
+        
+
+        #endregion
     }
 
     private void FixedUpdate()

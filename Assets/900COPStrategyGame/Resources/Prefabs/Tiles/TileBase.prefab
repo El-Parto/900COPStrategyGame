@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 897032305091357231}
   - component: {fileID: 4313671868894291338}
   - component: {fileID: 2033879891842879808}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TileBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,6 @@ Transform:
   - {fileID: 5299524667975648890}
   - {fileID: 8328896527151552167}
   - {fileID: 4461103014332716227}
-  - {fileID: 8994711490821919292}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -101,7 +100,7 @@ GameObject:
   - component: {fileID: 5435475870576734064}
   - component: {fileID: 4711930185623409845}
   - component: {fileID: 806200678572566472}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: TileGhost (2)
   m_TagString: TileFloorBase
   m_Icon: {fileID: 0}
@@ -203,7 +202,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: db9dea40525e72842b95a91e34643acc, type: 2}
   layerMask:
     serializedVersion: 2
-    m_Bits: 70
+    m_Bits: 71
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 3
 --- !u!54 &806200678572566472
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -336,7 +338,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: db9dea40525e72842b95a91e34643acc, type: 2}
   layerMask:
     serializedVersion: 2
-    m_Bits: 70
+    m_Bits: 71
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 3
 --- !u!54 &7454354096219731130
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -367,7 +372,7 @@ GameObject:
   - component: {fileID: 6166173928585516293}
   - component: {fileID: 6524142709217811860}
   - component: {fileID: 675343817643210354}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: TileGhost(G)
   m_TagString: TileFloorBase
   m_Icon: {fileID: 0}
@@ -469,7 +474,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: db9dea40525e72842b95a91e34643acc, type: 2}
   layerMask:
     serializedVersion: 2
-    m_Bits: 70
+    m_Bits: 71
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 3
 --- !u!54 &675343817643210354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -500,7 +508,7 @@ GameObject:
   - component: {fileID: 2031517837942572116}
   - component: {fileID: 6689342939268927646}
   - component: {fileID: 5226727130185241409}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: TileGhost (1)
   m_TagString: TileFloorBase
   m_Icon: {fileID: 0}
@@ -602,7 +610,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: db9dea40525e72842b95a91e34643acc, type: 2}
   layerMask:
     serializedVersion: 2
-    m_Bits: 70
+    m_Bits: 71
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 3
 --- !u!54 &5226727130185241409
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -631,7 +642,7 @@ GameObject:
   - component: {fileID: 5456332361593950189}
   - component: {fileID: 5456332361593950188}
   - component: {fileID: 5456332361593950191}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: HitBox
   m_TagString: TowerBase
   m_Icon: {fileID: 0}
@@ -713,101 +724,5 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -530131240172089429, guid: 6539f203c2fecd04289cd76e047f4b47, type: 3}
---- !u!1 &8617764182518974598
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8994711490821919292}
-  - component: {fileID: 5439356472894922137}
-  - component: {fileID: 7825161227571521875}
-  - component: {fileID: 3248277160603752659}
-  m_Layer: 0
-  m_Name: Hex_tile_geo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8994711490821919292
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8617764182518974598}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 897032305091357231}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5439356472894922137
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8617764182518974598}
-  m_Mesh: {fileID: -530131240172089429, guid: 6539f203c2fecd04289cd76e047f4b47, type: 3}
---- !u!23 &7825161227571521875
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8617764182518974598}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 5561349426305759274, guid: 6539f203c2fecd04289cd76e047f4b47, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3248277160603752659
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8617764182518974598}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -530131240172089429, guid: 6539f203c2fecd04289cd76e047f4b47, type: 3}

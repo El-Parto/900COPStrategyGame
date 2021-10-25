@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Cat
   - TileFloorBase
+  - IdiotBox
+  - Ghost
+  - TowerBase
+  - PlacedTile
+  - buttons
   layers:
   - Default
   - TransparentFX
@@ -14,7 +19,7 @@ TagManager:
   - Water
   - UI
   - hitbox
-  - 
+  - PlacedTile
   - 
   - 
   - 

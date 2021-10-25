@@ -3,24 +3,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
+using Image = UnityEngine.UI.Image;
 
 public class UIBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject tilePanel, optionsPanel;
     [SerializeField] private GameObject PanelStart, PanelEnd;
     [SerializeField] private GameObject opPanelStart, opPanelEnd;
+    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private Text finalScore;
     [SerializeField] private Image[] tiles;
     [SerializeField] private int[] tileID;
     [SerializeField] private Sprite[] UIimages;
     [SerializeField] private Text[] buttonText;
+    [SerializeField] private Button[] selectionButtons;
     [SerializeField] private string[] buttonTextString;
+    [SerializeField] private Text gameTimer;
+    public static bool gameOver;
     private bool on = true, opOn = true;
-    private int selectedInt;
+    private int day = 1;
     private bool placing;
-
+    public static bool endDay;
+    
     private void Start()
     {
         RNGesus();
+        gameTimer.text = "Day: " + day + "/7";
     }
 
     public void Minimise()
@@ -70,26 +82,42 @@ public class UIBehaviour : MonoBehaviour
             placing = false;
             Refresh();
         }
+
+        if (endDay)
+        {
+            Refresh();
+            RNGesus();
+        }
     }
 
     public void PickTile(int _selected)
     {
         on = false;
-        selectedInt = _selected;
         placing = true;
         GreyOut(tiles[_selected]);
+        selectionButtons[_selected].enabled = false;
     }
 
-    public void PlaceTile()
-    {
-        GreyOut(tiles[selectedInt]);
-    }
-    
     private void Refresh()
     {
+        day++;
+        gameTimer.text = "Day: " + day + "/7";
+        
+        if (gameOver)
+        {
+            finalScore.text = String.Empty;
+            gameOverPanel.SetActive(true);
+            
+        }
+        
         foreach (Image tile in tiles)
         {
             tile.color = Color.white;   
+        }
+
+        for (int i = 0; i < selectionButtons.Length; i++)
+        {
+            selectionButtons[i].enabled = true;
         }
     }
 
@@ -101,16 +129,15 @@ public class UIBehaviour : MonoBehaviour
             tiles[i].sprite = UIimages[tileID[i]];
             buttonText[i].text = buttonTextString[tileID[i]];
         }
+
+        endDay = false;
     }
     
     private void GreyOut(Image _image)
     {
-        var imageColour = _image.GetComponent<Color>();
-        imageColour = Color.gray;
+        _image.color = Color.gray;
     }
     
-    
-
     public void Deselect()
     {
         placing = false;
