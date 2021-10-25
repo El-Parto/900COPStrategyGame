@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileValue: 2
   tileName: Scratching Post
-  tileDescription: A good way to carve their place into society
+  tileDescription: 'Upon Placing: +2 points Bonus: +1 for every entertainment tile
+    adjacent or same stack'
   tileType: Entertainment
   tileMaterial: {fileID: 2100000, guid: dfe575bac18542b4cb3f8679cd49587a, type: 2}

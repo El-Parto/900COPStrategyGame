@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileValue: 1
   tileName: Ramp
-  tileDescription: Ramp it up for a Rampage
+  tileDescription: 'Upon Placing: +1 point. Bonus: +2 if building tiles are in the
+    same stack.'
   tileType: Exercise
   tileMaterial: {fileID: 2100000, guid: 8bd021d969e089e4ca944e3d0fb58987, type: 2}

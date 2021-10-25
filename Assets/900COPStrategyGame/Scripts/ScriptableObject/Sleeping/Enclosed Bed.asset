@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c9f5ee515cf3942944148371217a31, type: 3}
   m_Name: Enclosed Bed
   m_EditorClassIdentifier: 
-  tileValue: 7
+  tileValue: 5
   tileName: Enclosed Bed
-  tileDescription: Bedding for the well refined.
+  tileDescription: 'Upon Placing: + 5 points. Bonus: x0 points if another enclosed
+    bed is in the same stack.'
   tileType: Sleeping
   tileMaterial: {fileID: 2100000, guid: 537081d20d532604795305ca90f5337d, type: 2}
