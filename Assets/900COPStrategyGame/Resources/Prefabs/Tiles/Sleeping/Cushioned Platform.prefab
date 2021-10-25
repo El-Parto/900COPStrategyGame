@@ -114,9 +114,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: cc7c2074739944d40aad695333bcfe23, type: 2}
   - {fileID: 2100000, guid: 4e9822b32c7a81a429aa628c22354934, type: 2}
   - {fileID: 2100000, guid: db9dea40525e72842b95a91e34643acc, type: 2}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 70
 --- !u!54 &1105551888508131053
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -283,7 +280,7 @@ MonoBehaviour:
   createdTileName: Base Platform
   createdTileDescription: 
   createdtileType: Check Scriptable Object
-  bonusModifier: 3
+  bonusModifier: 1
 --- !u!1 &3478705159511231786
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,9 +578,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: cc7c2074739944d40aad695333bcfe23, type: 2}
   - {fileID: 2100000, guid: 4e9822b32c7a81a429aa628c22354934, type: 2}
   - {fileID: 2100000, guid: db9dea40525e72842b95a91e34643acc, type: 2}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 70
 --- !u!54 &2354690712072302870
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -714,9 +708,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: cc7c2074739944d40aad695333bcfe23, type: 2}
   - {fileID: 2100000, guid: 4e9822b32c7a81a429aa628c22354934, type: 2}
   - {fileID: 2100000, guid: db9dea40525e72842b95a91e34643acc, type: 2}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 70
 --- !u!54 &5543533164257059428
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -847,9 +838,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: cc7c2074739944d40aad695333bcfe23, type: 2}
   - {fileID: 2100000, guid: 4e9822b32c7a81a429aa628c22354934, type: 2}
   - {fileID: 2100000, guid: db9dea40525e72842b95a91e34643acc, type: 2}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 70
 --- !u!54 &5657058430645285854
 Rigidbody:
   m_ObjectHideFlags: 0

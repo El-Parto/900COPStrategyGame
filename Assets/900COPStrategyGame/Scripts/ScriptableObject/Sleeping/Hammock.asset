@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c9f5ee515cf3942944148371217a31, type: 3}
   m_Name: Hammock
   m_EditorClassIdentifier: 
-  tileValue: 3
+  tileValue: 2
   tileName: Hammock
-  tileDescription: The Simpsons would be jealous
+  tileDescription: 'Upon Placing: +2 points, Bonus: +2 points if sleeping t in the
+    same stack or adjacent'
   tileType: Sleeping
   tileMaterial: {fileID: 2100000, guid: 1aead4f8905079349a1ec57311800651, type: 2}

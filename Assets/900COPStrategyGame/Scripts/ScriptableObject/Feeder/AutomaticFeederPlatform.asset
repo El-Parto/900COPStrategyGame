@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c9f5ee515cf3942944148371217a31, type: 3}
   m_Name: AutomaticFeederPlatform
   m_EditorClassIdentifier: 
-  tileValue: 5
+  tileValue: 8
   tileName: Automatic Feeder Platform
-  tileDescription: Livin the good life when food is magically replaced for you.
+  tileDescription: 'Upon Placing: + 8 points. Bonus:  -2 points for every exercise
+    tile in the stack'
   tileType: Feeder
   tileMaterial: {fileID: 2100000, guid: 997f912fdfc4f1a4b93832490f743606, type: 2}

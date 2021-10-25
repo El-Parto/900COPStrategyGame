@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileValue: 1
   tileName: Basic Platform
-  tileDescription: Platform used to build and construct more tiles for Pumpkin
+  tileDescription: 'Upon Placing: +1 point. No Bonus (+0)'
   tileType: Building
   tileMaterial: {fileID: 2100000, guid: d90ad946b5ea8864a8820bc1c857b15f, type: 2}

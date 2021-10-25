@@ -29,12 +29,12 @@ public class TileManager : MonoBehaviour
 	    // the auto filling process.
 	    material = tileInfo.tileMaterial;
 	    createdTileName = tileInfo.tileName;
-	    createdTileDescription = tileInfo.tileType;
-	    createdtileType = tileInfo.tileDescription;
+	    createdTileDescription = tileInfo.tileDescription;
+	    createdtileType = tileInfo.tileType;
 	   
 	    value = tileInfo.tileValue;
 	    
-	    // tileInfo = the scriptable object. Remeber this is OBJECT based and refers to each individual object relative to it's game object reference.
+	    // tileInfo = the scriptable object. Remember this is OBJECT based and refers to each individual object relative to it's game object reference.
 	    // e.g. base platform Game object has this script on it, that needs a reference to a scriptable object also named
 	    // base platform, so then the values in the sepcific scriptable object is called. And only the object reference.
 

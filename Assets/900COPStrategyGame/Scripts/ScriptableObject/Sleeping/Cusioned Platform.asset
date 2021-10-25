@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c9f5ee515cf3942944148371217a31, type: 3}
   m_Name: Cusioned Platform
   m_EditorClassIdentifier: 
-  tileValue: 4
+  tileValue: 3
   tileName: Cushioned Platform
-  tileDescription: Cat and Mouse was never this easy.
+  tileDescription: 'Upon Placing: +3 points.  Bonus: +1 point  for  no other sleeping
+    tile in the stack'
   tileType: Sleeping
   tileMaterial: {fileID: 2100000, guid: 58908ee3af4a7fb43a44d2221d1846dc, type: 2}
