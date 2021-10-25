@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 897032305091357231}
   - component: {fileID: 4313671868894291338}
   - component: {fileID: 2033879891842879808}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TileBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,6 +203,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 71
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 3
 --- !u!54 &806200678572566472
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -336,6 +339,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 71
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 3
 --- !u!54 &7454354096219731130
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -469,6 +475,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 71
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 3
 --- !u!54 &675343817643210354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -602,6 +611,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 71
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 3
 --- !u!54 &5226727130185241409
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -630,7 +642,7 @@ GameObject:
   - component: {fileID: 5456332361593950189}
   - component: {fileID: 5456332361593950188}
   - component: {fileID: 5456332361593950191}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: HitBox
   m_TagString: TowerBase
   m_Icon: {fileID: 0}

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.Windows.WebCam;
 
 public class GameBehaviour : MonoBehaviour
@@ -11,9 +12,13 @@ public class GameBehaviour : MonoBehaviour
     [SerializeField] private GameObject[] bases, groundBoxes, level1boxes, level2boxes , level3boxes;
     [SerializeField] private bool placing;
     [SerializeField] private GameObject Ghost, PlacedTile;
-    [SerializeField] private int newLayer = 7;
-   void Start()
+    [SerializeField] private int[] gameTimer;
+    [SerializeField] private LayerMask buildableZone = 7;
+    [SerializeField] private GameObject[] availableTiles;
+    [SerializeField] private int selectedTile;
+    void Start()
     {
+        gameTimer = new int[2];
         Hitboxes = new[] {bases, groundBoxes, level1boxes, level2boxes, level3boxes};
         Activity(playerHeight);
         Ghost.SetActive(false);
@@ -33,20 +38,32 @@ public class GameBehaviour : MonoBehaviour
            Ghost.transform.position = new Vector3(0, 30, 0);
            return;
        }
+
+       if (placing && Input.GetKeyDown(KeyCode.Mouse0))
+       {
+           Instantiate(availableTiles[selectedTile], Ghost.transform.position, Quaternion.identity);
+       }
        
        Ghost.transform.position = CameraBehaviour.hitLocation;
-
-
-       if (!Input.GetKeyDown(KeyCode.Mouse0) || CameraBehaviour.hit.collider.gameObject.layer == newLayer) return;
-       
-       var camTarget = CameraBehaviour.hit.collider.gameObject;
-       Instantiate(PlacedTile, Ghost.transform.position, Quaternion.identity);
-       placing = false;
-           
-           
-       camTarget.tag = "PlacedTile";
-       camTarget.layer = newLayer;
    }
+
+   void MarchOfTime()
+   {
+       gameTimer[0]++;
+       
+       if (gameTimer[0] > 2)
+       {
+           gameTimer[0] = 0;
+           gameTimer[1]++;
+           UIBehaviour.endDay = true;
+       }
+
+       if (gameTimer[1] > 7)
+       {
+           UIBehaviour.gameOver = true;
+       }
+   }
+   
 
    public void ToggleHitBoxes(bool up)
     {
@@ -65,18 +82,15 @@ public class GameBehaviour : MonoBehaviour
         Ghost.SetActive(true);
     }
 
-    public void PlaceBuilding()
-    {
-        
-    }
-
     void Activity(int height)
     {
+        height = playerHeight + 1;
+        
         for (int i = 0; i < Hitboxes.Length; i++)
         {
             foreach (GameObject hitBox in Hitboxes[i])
             {
-                if (i <= playerHeight + 1)
+                if (i <= height)
                 {
                     hitBox.SetActive(true);
                 }
@@ -86,6 +100,5 @@ public class GameBehaviour : MonoBehaviour
                 }
             }
         }
-
     }
 }
