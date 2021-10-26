@@ -11,10 +11,10 @@ using Image = UnityEngine.UI.Image;
 
 public class UIBehaviour : MonoBehaviour
 {
-    [SerializeField] private GameObject tilePanel, optionsPanel;
+    [SerializeField] private GameObject tilePanel, optionsPanel, howToPlayPanel, gameOverPanel;
     [SerializeField] private GameObject PanelStart, PanelEnd;
     [SerializeField] private GameObject opPanelStart, opPanelEnd;
-    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject htpStart, htpEnd;
     [SerializeField] private Text finalScore;
     [SerializeField] private Image[] tiles;
     [SerializeField] private int[] tileID;
@@ -22,9 +22,10 @@ public class UIBehaviour : MonoBehaviour
     [SerializeField] private Text[] buttonText;
     [SerializeField] private Button[] selectionButtons;
     [SerializeField] private string[] buttonTextString;
-    [SerializeField] private Text gameTimer, todayTiles;
+    [SerializeField] private Text gameTimer, todayTiles, score;
+    public static int publicScore;
     public static bool gameOver;
-    private bool on = true, opOn = true;
+    private bool on = true, opOn = true, htp;
     private int day = 1;
     public static int tileNo;
     private bool placing;
@@ -36,32 +37,18 @@ public class UIBehaviour : MonoBehaviour
         gameTimer.text = "Day: " + day + "/7";
     }
 
-    public void Minimise()
-    {
-        on = !on;
-    }
-
-    public void OptionsMenuMinimise()
-    {
-        opOn = !opOn;
-        placing = false;
-    }
-
     private void Update()
     {
         #region Slides
-
         if (on)
         {
             tilePanel.transform.position = new Vector3(PanelEnd.transform.position.x, Mathf.Lerp(
-                tilePanel.transform.position.y,
-                PanelStart.transform.position.y, Time.fixedDeltaTime));
+                tilePanel.transform.position.y, PanelStart.transform.position.y, Time.fixedDeltaTime));
         }
         else
         {
             tilePanel.transform.position = new Vector3(PanelEnd.transform.position.x, Mathf.Lerp(
-                tilePanel.transform.position.y,
-                PanelEnd.transform.position.y, Time.fixedDeltaTime));
+                tilePanel.transform.position.y, PanelEnd.transform.position.y, Time.fixedDeltaTime));
         }
 
         if (opOn)
@@ -74,6 +61,17 @@ public class UIBehaviour : MonoBehaviour
             optionsPanel.transform.position = new Vector3(Mathf.Lerp(optionsPanel.transform.position.x,
                 opPanelEnd.transform.position.x, Time.fixedDeltaTime), opPanelEnd.transform.position.y);
         }
+        
+        if (htp)
+        {
+            howToPlayPanel.transform.position = new Vector3(htpEnd.transform.position.x, Mathf.Lerp(
+               howToPlayPanel.transform.position.y, htpStart.transform.position.y, Time.fixedDeltaTime));
+        }
+        else
+        {
+            howToPlayPanel.transform.position = new Vector3(htpEnd.transform.position.x, Mathf.Lerp(
+                howToPlayPanel.transform.position.y, htpEnd.transform.position.y, Time.fixedDeltaTime));
+        }
 
 
         #endregion
@@ -85,6 +83,7 @@ public class UIBehaviour : MonoBehaviour
         }
         
         TileCounter();
+        score.text = publicScore.ToString();
 
         if (!endDay) return; 
         Refresh();
@@ -99,6 +98,22 @@ public class UIBehaviour : MonoBehaviour
         {
             todayTiles.text = "A new day has dawned, Tiles re-rolled!";
         }
+    }
+    
+    public void Minimise()
+    {
+        on = !on;
+    }
+
+    public void OptionsMenuMinimise()
+    {
+        opOn = !opOn;
+        placing = false;
+    }
+
+    public void htpMinimise()
+    {
+        htp = !htp;
     }
 
     public void PickTile(int _selected)

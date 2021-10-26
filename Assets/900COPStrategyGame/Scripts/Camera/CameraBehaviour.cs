@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 using Cursor = UnityEngine.UIElements.Cursor;
@@ -14,57 +13,46 @@ public class CameraBehaviour : MonoBehaviour
     [SerializeField] private float sensitivity = 10;
     [SerializeField] private Transform managerTransform;
     [SerializeField] private int altitude;
-    private int layerMask = 5 << 6;
+    private int placedTileLayer = 7, floorLayer = 4;
     [SerializeField] private GameObject tooltip;
     [SerializeField] private Text highlightedTile, tileType, description;
     public static RaycastHit hit;
     public static Vector3 hitLocation;
     private Ray ray;
-    private Ray UIray;
+    public static bool targetingGameSpace;
 
     private void Start()
     {
         ray = camera.ScreenPointToRay(Vector3.forward);
     }
-
-
+    
     void Update()
     {
-        ray = camera.ScreenPointToRay(Input.mousePosition);
-
         #region inSceneTileToolTip
-        if (Physics.Raycast(ray,out hit, Mathf.Infinity, layerMask))
+        if (Physics.Raycast(ray,out hit, Mathf.Infinity))
         {
             hitLocation = hit.collider.gameObject.transform.position;
-            
-            tooltip.SetActive(true);
-            tooltip.transform.position = Input.mousePosition;
 
-            if (hit.collider.CompareTag("TileFloorBase"))
+            tooltip.SetActive(hit.collider.gameObject.layer != floorLayer);
+
+            tooltip.transform.position = Input.mousePosition;
+            Debug.Log(hit.collider.gameObject.layer);
+
+            if(hit.collider.gameObject.layer != placedTileLayer)
             {
                 highlightedTile.text = "Empty location:";
                 tileType.text = "none";
                 description.text = "You could build anything to appease his lordship here";
             }
-            
-            else if(hit.collider.GetComponentInChildren<TileManager>())
+            else
             {
                 TileManager tempInfo = hit.collider.GetComponentInChildren<TileManager>();
+ 
                 highlightedTile.text = tempInfo.createdTileName;
                 description.text = "Type: " + tempInfo.createdTileDescription;
                 tileType.text =  tempInfo.createdtileType;
             }
         }
-        else
-        {
-            tooltip.SetActive(false);
-        }
-        #endregion
-
-        #region CanvasToolTip
-        
-        
-
         #endregion
     }
 

@@ -21,6 +21,7 @@ TagManager:
   - Ramp
   - Bridge
   - Support
+  - UI
   layers:
   - Default
   - TransparentFX

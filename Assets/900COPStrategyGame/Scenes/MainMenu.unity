@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -623,11 +623,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePanel: {fileID: 622466546}
   optionsPanel: {fileID: 622466546}
+  howToPlayPanel: {fileID: 622466546}
+  gameOverPanel: {fileID: 622466546}
   PanelStart: {fileID: 622466546}
   PanelEnd: {fileID: 622466546}
   opPanelStart: {fileID: 622466546}
   opPanelEnd: {fileID: 622466546}
-  gameOverPanel: {fileID: 622466546}
+  htpStart: {fileID: 622466546}
+  htpEnd: {fileID: 622466546}
   finalScore: {fileID: 365289289}
   tiles: []
   tileID: 
@@ -636,6 +639,8 @@ MonoBehaviour:
   selectionButtons: []
   buttonTextString: []
   gameTimer: {fileID: 365289289}
+  todayTiles: {fileID: 365289289}
+  score: {fileID: 365289289}
 --- !u!4 &1191166480
 Transform:
   m_ObjectHideFlags: 0
@@ -695,11 +700,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5219543698730956708, guid: dba95f6d8d6a61e4d9513eb72d54e55b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -591.1842
+      value: -394.6675
       objectReference: {fileID: 0}
     - target: {fileID: 5219543698730956708, guid: dba95f6d8d6a61e4d9513eb72d54e55b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -367.2605
+      value: -293.224
       objectReference: {fileID: 0}
     - target: {fileID: 5219543698730956708, guid: dba95f6d8d6a61e4d9513eb72d54e55b, type: 3}
       propertyPath: m_LocalPosition.x

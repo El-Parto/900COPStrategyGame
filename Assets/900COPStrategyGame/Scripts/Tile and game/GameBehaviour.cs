@@ -15,6 +15,7 @@ public class GameBehaviour : MonoBehaviour
     [SerializeField] private int builtZone = 7;
     [SerializeField] private GameObject[] availableTiles;
     public static int selectedTile;
+    [SerializeField] private Vector3 scaling =  new Vector3(0.9f, 0.25f, 0.9f);
 
     private void Start()
     {
@@ -47,8 +48,8 @@ public class GameBehaviour : MonoBehaviour
 
        if (GhostShenanigans.available)
        {
-           PlacedTile = Instantiate(availableTiles[selectedTile], CameraBehaviour.hit.collider.gameObject.transform.position, 
-               Quaternion.AngleAxis(180, Vector3.up));
+           PlacedTile = Instantiate(availableTiles[selectedTile], CameraBehaviour.hit.collider.gameObject.transform);
+           PlacedTile.transform.localScale = scaling;
            var target = CameraBehaviour.hit.collider.gameObject;
            target.tag = availableTiles[selectedTile].tag;
            target.layer = builtZone;

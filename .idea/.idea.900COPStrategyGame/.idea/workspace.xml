@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd18bc5d-a75a-45a8-a2de-07d25f05ba9c" name="Default Changelist" comment="">
+    <list default="true" id="6a616706-0b8d-4296-bbb9-1ef0e5a374f7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/Tiles/Building/BasePlatform.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/Tiles/Building/BasePlatform.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/Tiles/Building/Support.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/Tiles/Building/Support.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/Tiles/Feeder/AutomaticFeederPlatform 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Materials/Tiles/Feeder/AutomaticFeederPlatform 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/Tiles/Entertainment/Scratching Post.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/Tiles/Entertainment/Scratching Post.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/Tiles/Sleeping/Cushioned Platform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Resources/Prefabs/Tiles/Sleeping/Cushioned Platform.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Camera/CameraBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Camera/CameraBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/GUIScripts/UIBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/GUIScripts/UIBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GameBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GameBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GhostShenanigans.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/GhostShenanigans.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileDisplay.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileDisplay.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/Tile and game/TileManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
@@ -74,6 +66,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/builds/Cat(Copythis).exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Rhys\Documents\GitHub\900COPStrategyGame\builds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -130,5 +130,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/GUIScripts/UIBehaviour.cs</url>
+          <line>62</line>
+          <properties documentPath="C:\Users\Rhys\Documents\GitHub\900COPStrategyGame\Assets\900COPStrategyGame\Scripts\GUIScripts\UIBehaviour.cs" initialLine="80" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="2366" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2367" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
