@@ -192,14 +192,17 @@ public class UIBehaviour : MonoBehaviour
 
     private void UpdateToolTips()
     {
-        GameBehaviour tileRef = gameManager.GetComponent<GameBehaviour>();
-        for (int i = 0; i < tilePickerToolTips.Length; i++)
+        if (gameManager.GetComponent<GameBehaviour>())
         {
-            var getName = tileRef.availableTiles[tileID[i]].GetComponent<TileManager>();
-            tilePickerToolTips[i][0].text = getName.createdTileName;
-            tilePickerToolTips[i][1].text = getName.createdtileType;
-            tilePickerToolTips[i][2].text = getName.createdTileDescription;
+            GameBehaviour tileRef = gameManager.GetComponent<GameBehaviour>();
+            for (int i = 0; i < tilePickerToolTips.Length; i++)
+            {
+                var getName = tileRef.availableTiles[tileID[i]].GetComponent<TileManager>();
+                tilePickerToolTips[i][0].text = getName.createdTileName;
+                tilePickerToolTips[i][1].text = getName.createdtileType;
+                tilePickerToolTips[i][2].text = getName.createdTileDescription;
             
+            }
         }
     }
     
