@@ -15,49 +15,41 @@ public class CameraBehaviour : MonoBehaviour
     [SerializeField] private int altitude;
     private int placedTileLayer = 7, floorLayer = 4;
     [SerializeField] private GameObject tooltip;
-    [SerializeField] private Text highlightedTile, tileType, description;
+    [SerializeField] private int maxHeight = 3, minHeight;
+    
+    public Text[] highlightedTile;
     public static RaycastHit hit;
     public static Vector3 hitLocation;
     private Ray ray;
-    public static bool targetingGameSpace;
-
-    private void Start()
-    {
-        ray = camera.ScreenPointToRay(Vector3.forward);
-    }
     
-    void Update()
+    void FixedUpdate()
     {
+        ray = camera.ScreenPointToRay(Input.mousePosition);
+        
         #region inSceneTileToolTip
         if (Physics.Raycast(ray,out hit, Mathf.Infinity))
         {
             hitLocation = hit.collider.gameObject.transform.position;
 
             tooltip.SetActive(hit.collider.gameObject.layer != floorLayer);
-
             tooltip.transform.position = Input.mousePosition;
-            Debug.Log(hit.collider.gameObject.layer);
 
             if(hit.collider.gameObject.layer != placedTileLayer)
             {
-                highlightedTile.text = "Empty location:";
-                tileType.text = "none";
-                description.text = "You could build anything to appease his lordship here";
+                highlightedTile[0].text = "Empty location:";
+                highlightedTile[1].text = "none";
+                highlightedTile[2].text = "You could build anything to appease his lordship here";
             }
             else
             {
                 TileManager tempInfo = hit.collider.GetComponentInChildren<TileManager>();
- 
-                highlightedTile.text = tempInfo.createdTileName;
-                description.text = "Type: " + tempInfo.createdTileDescription;
-                tileType.text =  tempInfo.createdtileType;
+                highlightedTile[0].text = tempInfo.createdTileName;
+                highlightedTile[1].text = "Type: " + tempInfo.createdtileType;
+                highlightedTile[2].text = tempInfo.createdTileDescription;
             }
         }
         #endregion
-    }
-
-    private void FixedUpdate()
-    {
+        
         MoveCamera();
     }
 
@@ -65,8 +57,8 @@ public class CameraBehaviour : MonoBehaviour
     {
         float horizontalMovement = Input.GetAxis("Horizontal") * sensitivity;
         float verticalMovement = Input.GetAxis("Vertical") * sensitivity;
-        Vector3 camPos = camera.transform.position;
         
+        Vector3 camPos = camera.transform.position;
         Mathf.Clamp(camPos.x, camMin, camMax);
         Mathf.Clamp(camPos.z, camMin, camMax);
 
@@ -77,17 +69,16 @@ public class CameraBehaviour : MonoBehaviour
 
     public void ChangeHeightLevel(bool up)
     {
-        if (up && altitude < 3)
+        if (up && altitude < maxHeight)
         {
             altitude++;
-            managerTransform.position += new Vector3(0, 1, 0);
+            managerTransform.position += Vector3.up;
         }
         
-        if (!up && altitude > 0)
+        if (!up && altitude > minHeight)
         {
             altitude--;
-            managerTransform.position += new Vector3(0, -1, 0);
+            managerTransform.position += Vector3.down;
         }
     }
-    
 }

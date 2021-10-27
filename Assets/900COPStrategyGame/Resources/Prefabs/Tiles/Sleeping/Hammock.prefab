@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3290121607506878933}
   - component: {fileID: 3290121607506878934}
+  - component: {fileID: 1343800982029540790}
   m_Layer: 0
   m_Name: Hammock
   m_TagString: Hammock
@@ -44,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e45e4e3df8bf342b3bce1e71e4dd8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileInfo: {fileID: 11400000, guid: c8222074dfaaa0c4d8cf0ddfb10868ed, type: 2}
+  tileInfo: {fileID: 11400000, guid: 089c39809ad7d6c4d897d6eaa466d937, type: 2}
   tileObject: {fileID: 3290121607506878935}
   material: {fileID: 2100000, guid: 1aead4f8905079349a1ec57311800651, type: 2}
   descriptionText: {fileID: 3368714300411969957, guid: fe64e0c6841e25342a84adc546de97a9, type: 3}
@@ -52,9 +53,28 @@ MonoBehaviour:
   tileTypeText: {fileID: 8224335828587488084, guid: 5be5990be6416a34d8c47e3a2e263d02, type: 3}
   value: 1
   createdTileName: Base Platform
-  createdTileDescription: 
-  createdtileType: Check Scriptable Object
+  createdTileDescription: Hammock
+  createdtileType: Grants 2 points, +2 for every adjacent Sleeping tile
   bonusModifier: 3
+--- !u!114 &1343800982029540790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290121607506878935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09e25f2c21fa57143869d5abdecd25e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adjacentDistance: 2
+  hexAngle: []
+  upndown: []
+  norEast: {x: 1, y: 0, z: 1}
+  norWest: {x: -1, y: 0, z: 1}
+  southEast: {x: -1, y: 0, z: 1}
+  southWest: {x: -1, y: 0, z: -1}
 --- !u!1 &3478705159511231786
 GameObject:
   m_ObjectHideFlags: 0

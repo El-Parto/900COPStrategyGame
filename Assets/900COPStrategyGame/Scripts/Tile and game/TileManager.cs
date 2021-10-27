@@ -33,8 +33,7 @@ public class TileManager : MonoBehaviour
 	    // tileInfo = the scriptable object. Remember this is OBJECT based and refers to each individual object relative to it's game object reference.
 	    // e.g. base platform Game object has this script on it, that needs a reference to a scriptable object also named
 	    // base platform, so then the values in the sepcific scriptable object is called. And only the object reference.
-
-	    // tile UI text references here
+	    
 	    tileNameText.text = createdTileName;
 	    descriptionText.text = createdTileDescription;
 	    tileTypeText.text = createdtileType;

@@ -13,7 +13,7 @@ public class GameBehaviour : MonoBehaviour
     [SerializeField] private GameObject Ghost, PlacedTile;
     [SerializeField] private int[] gameTimer;
     [SerializeField] private int builtZone = 7;
-    [SerializeField] private GameObject[] availableTiles;
+    public GameObject[] availableTiles;
     public static int selectedTile;
     [SerializeField] private Vector3 scaling =  new Vector3(0.9f, 0.25f, 0.9f);
 

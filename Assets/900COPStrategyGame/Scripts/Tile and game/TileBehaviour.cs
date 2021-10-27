@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class TileBehaviour : MonoBehaviour
 {
-	[SerializeField] private int adjacentDistance = 2;
+	[SerializeField] private int adjacentDistance = 4;
 	[SerializeField] private Vector3[] hexAngle;
 	[SerializeField] private Vector3[] upndown;
 	[SerializeField] private Vector3 norEast = new Vector3(1, 0, 1),
@@ -31,61 +31,84 @@ public class TileBehaviour : MonoBehaviour
 
 	private void AOEshot(string target, int baseScore, int bonus, Vector3[] shotAngle )
 	{
-		UIBehaviour.publicScore += baseScore;
-				
+		//amount of bonus points for this tile
+		int tempScore = 0;
+		
+		//fire a ray in every hex direction
 		foreach (var angle in shotAngle)
 		{
 			if (Physics.Raycast(transform.position, angle, out var hit, adjacentDistance))
 			{
-				if (hit.collider.gameObject.GetComponent<TileManager>() == null)
+				//check if that tile has data
+				if (hit.collider.gameObject.GetComponent<TileManager>() != null)
 				{
+					//add a bonus to the final score for each hit on the bonus providing type
+					TileManager tempManager = hit.collider.gameObject.GetComponent<TileManager>();
+					if (tempManager.createdtileType == target)
+					{
+						tempScore++;
+					}
 				}
-
-				TileManager tempManager = hit.collider.gameObject.GetComponent<TileManager>();
-				if (tempManager.createdtileType == target)
-				{
-					UIBehaviour.publicScore += bonus;
-				}
-
 			}
 		}
+		//a hail mary because i was only getting either the base or the bonus not both
+		var addScore = baseScore + (tempScore * bonus);
+		
+		//add the score to your total
+		UIBehaviour.publicScore += addScore;
 	}
 
 	private void AOEExclusion(string target, int baseScore, int bonus, Vector3[] shotAngle, bool name)
 	{
 		List<string> adjacentTypes = new List<string>();
-		UIBehaviour.publicScore += baseScore;
-		
+
 		foreach (var angle in shotAngle)
 		{
 			if (Physics.Raycast(transform.position, angle, out var hit, adjacentDistance))
 			{
-				if (hit.collider.gameObject.GetComponent<TileManager>() == null)
+				if (hit.collider.gameObject.GetComponent<TileManager>() != null)
 				{
-				}
-
-				TileManager tempManager = hit.collider.gameObject.GetComponent<TileManager>();
-				if (name)
-				{
-					if (tempManager.createdTileName == target)
+					TileManager tempManager = hit.collider.gameObject.GetComponent<TileManager>();
+					if (name)
 					{
-						adjacentTypes.Add(tempManager.createdTileName);
+						if (tempManager.createdTileName == target)
+						{
+							adjacentTypes.Add(tempManager.createdTileName);
+						}
+					}
+					else
+					{
+						if (tempManager.createdtileType == target)
+						{
+							adjacentTypes.Add(tempManager.createdtileType);
+						}
 					}
 				}
-				else
-				{
-					if (tempManager.createdtileType == target)
-					{
-						adjacentTypes.Add(tempManager.createdtileType);
-					}
-				}
-
 			}
 		}
 
-		if (!adjacentTypes.Contains(target))
+		TileManager _tempManager = gameObject.GetComponent<TileManager>();
+		if (_tempManager.createdTileName == "Enclosed Bed")
 		{
-			UIBehaviour.publicScore += bonus;
+			if (!adjacentTypes.Contains(target))
+			{
+				UIBehaviour.publicScore += baseScore;
+			}
+			else
+			{
+				return;
+			}
+		}
+		else
+		{
+			if (!adjacentTypes.Contains(target))
+			{
+				UIBehaviour.publicScore += baseScore + bonus;
+			}
+			else
+			{
+				UIBehaviour.publicScore += baseScore;
+			}
 		}
 	}
 	
@@ -98,7 +121,7 @@ public class TileBehaviour : MonoBehaviour
 				break;
 			
 			case "Enclosed Bed":
-				AOEExclusion("Enclosed Bed", 3, 1, upndown , true);
+				AOEExclusion("Enclosed Bed", 5, -5, upndown , true);
 				break;
 			
 			case "Hammock":
