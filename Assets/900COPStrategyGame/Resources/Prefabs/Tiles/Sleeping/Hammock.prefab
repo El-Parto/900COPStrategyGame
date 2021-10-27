@@ -52,9 +52,9 @@ MonoBehaviour:
   tileNameText: {fileID: 3009829583271682254, guid: e3f159a8a7b574b48a8617469beeb80f, type: 3}
   tileTypeText: {fileID: 8224335828587488084, guid: 5be5990be6416a34d8c47e3a2e263d02, type: 3}
   value: 1
-  createdTileName: Base Platform
-  createdTileDescription: Hammock
-  createdtileType: Grants 2 points, +2 for every adjacent Sleeping tile
+  createdTileName: Hammock
+  createdTileDescription: Grants 2 points, +2 for every adjacent Sleeping tile
+  createdtileType: Sleeping
   bonusModifier: 3
 --- !u!114 &1343800982029540790
 MonoBehaviour:

@@ -631,16 +631,26 @@ MonoBehaviour:
   opPanelEnd: {fileID: 622466546}
   htpStart: {fileID: 622466546}
   htpEnd: {fileID: 622466546}
+  UIBools: 
+  button1TT: []
+  button2TT: []
+  button3TT: []
+  button4TT: []
+  button5TT: []
   finalScore: {fileID: 365289289}
   tiles: []
-  tileID: 
   UIimages: []
   buttonText: []
-  selectionButtons: []
   buttonTextString: []
   gameTimer: {fileID: 365289289}
   todayTiles: {fileID: 365289289}
   score: {fileID: 365289289}
+  maxGameLength: 7
+  fastMove: 0
+  gameManager: {fileID: 622466546}
+  events: []
+  tileID: 
+  selectionButtons: []
 --- !u!4 &1191166480
 Transform:
   m_ObjectHideFlags: 0
