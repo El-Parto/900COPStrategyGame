@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a616706-0b8d-4296-bbb9-1ef0e5a374f7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/GUIScripts/UIBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/900COPStrategyGame/Scripts/GUIScripts/UIBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.900COPStrategyGame/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
